@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import './App.scss';
+import Direction from './Components/Map/Direction';
 
 function App() {
+  const [origin, setOrigin] = useState('');
+  const [destination, setDestination] = useState('')
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-header">
+        <h3>HEY THIS IS MAP AND SCSS COMPONENT</h3>
+        <input type="text" onBlur={e => setOrigin(e.target.value)} placeholder="Starting From" />
+        <input type="text" onBlur={e => setDestination(e.target.value)} placeholder="Going To" />
+        <Direction origin={origin} destination={destination}></Direction>
+      </div>
     </div>
   );
 }

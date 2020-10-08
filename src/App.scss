@@ -1,0 +1,38 @@
+@import './Components/Style/Color.scss';
+
+.App {
+  text-align: center;
+  background-color: $textColor;
+}
+
+.App-header {
+  background-color: $bgColor;
+  width: 100% - 20%; 
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: $textColor;
+
+  h3{
+      color: $textColor;
+    }
+
+}
+.App-header input{
+  width: 400px;
+  height: 40px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+
